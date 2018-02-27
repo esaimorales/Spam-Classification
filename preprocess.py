@@ -4,9 +4,6 @@ import numpy as np
 
 # standardize columns to all have mean 0 and unit variance
 def standardize(features):
-    # mu = (np.mean(np.matrix(features), axis = 0)).T
-    # print mu
-    # print features.mean(axis=0)
     result = (features - features.mean(axis=0))/features.std(axis=0)
     return result
 
@@ -16,4 +13,4 @@ def transform(data):
 
 # binarize features using I(xij > 0)
 def binarize(data):
-    return data 
+    return data
