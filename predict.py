@@ -21,7 +21,7 @@ train_y = get_classification('spam_train.txt')
 test_x = get_features('spam_test.txt')
 test_y = get_classification('spam_test.txt')
 
-print 'standardizing features... '
+print 'standardizing features...'
 
 # standardize features
 train_x = standardize(train_x)
@@ -29,3 +29,7 @@ test_x = standardize(test_x)
 
 predicted_train = logistic_regression(train_x, train_y)
 predicted_test = logistic_regression(test_x, test_y)
+
+# print 'Logistic Regression with Transformed Features:'
+
+# print 'Logistic Regression with Binarized Features:'

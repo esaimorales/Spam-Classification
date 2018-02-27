@@ -1,6 +1,6 @@
 import numpy as np
 
-# defines methods for parsing the train and test datasets
+# Defines methods for parsing the train and test datasets
 
 # returns numpy array of feature values
 def get_features(file_name):
