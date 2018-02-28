@@ -1,5 +1,6 @@
 import numpy as np
 import random
+import sys
 
 # Logistic regression and helper functions
 
@@ -21,7 +22,7 @@ def get_error(predicted, target):
 
 # defines logistic regression with gradient descent
 # follows lgistic regression function:
-# W_t+1 = W_t + aX.T (Y - S(W.T Xi))
+# W_t+1 = W_t + a X.T (Y - S(W.T Xi))
 def logistic_regression(X, Y):
     # set alpha (step-size)
     alpha = 0.00001
