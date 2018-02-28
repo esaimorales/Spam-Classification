@@ -5,7 +5,6 @@ import numpy as np
 # standardize columns to all have mean 0 and unit variance
 def standardize(features):
     result = (features - features.mean(axis=0))/features.std(axis=0)
-    print result
     return result
 
 # transform features using log(xij + 0.1)
