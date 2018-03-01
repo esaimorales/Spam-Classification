@@ -2,7 +2,7 @@ import numpy as np
 import random
 import sys
 
-# Logistic regression and helper functions
+# Logistic regression and helper function
 
 # defines sigmoid function
 def sigmoid(value):
