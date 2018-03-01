@@ -56,7 +56,7 @@ test_predictions = predict_y(test_x, w)
 train_predictions = sigmoid(train_predictions)
 test_predictions = sigmoid(test_predictions)
 
-# stabailize predictions
+# stabilize predictions
 train_predictions = stabilize(train_predictions)
 test_predictions = stabilize(test_predictions)
 
@@ -65,7 +65,7 @@ error_rate = get_error(train_predictions, train_y)
 print 'Train - Error Rate:', error_rate
 
 error_rate = get_error(test_predictions, test_y)
-print 'Test - Error Rate:', error_rate
+print 'Test  - Error Rate:', error_rate
 
 # -------------------------------------------------- #
 # ------------- Transformed Features --------------- #
@@ -107,7 +107,7 @@ test_predictions = predict_y(test_x, w)
 train_predictions = sigmoid(train_predictions)
 test_predictions = sigmoid(test_predictions)
 
-# stabailize predictions
+# stabilize predictions
 train_predictions = stabilize(train_predictions)
 test_predictions = stabilize(test_predictions)
 
@@ -116,7 +116,7 @@ error_rate = get_error(train_predictions, train_y)
 print 'Train - Error Rate:', error_rate
 
 error_rate = get_error(test_predictions, test_y)
-print 'Error Rate:', error_rate
+print 'Test  - Error Rate:', error_rate
 
 # ------------------------------------------------ #
 # -------------- Binarized Features -------------- #
@@ -158,7 +158,7 @@ test_predictions = predict_y(test_x, w)
 train_predictions = sigmoid(train_predictions)
 test_predictions = sigmoid(test_predictions)
 
-# stabailize predictions
+# stabilize predictions
 train_predictions = stabilize(train_predictions)
 test_predictions = stabilize(test_predictions)
 
@@ -167,4 +167,4 @@ error_rate = get_error(train_predictions, train_y)
 print 'Train - Error Rate:', error_rate
 
 error_rate = get_error(test_predictions, test_y)
-print 'Error Rate:', error_rate
+print 'Test  - Error Rate:', error_rate

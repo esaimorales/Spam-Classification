@@ -25,7 +25,9 @@ def get_error(predicted, target):
 # W_t+1 = W_t + a X.T (Y - S(W.T Xi))
 def logistic_regression(X, Y):
     # set alpha (step-size)
+    # original alpha = 0.00001
     alpha = 0.00001
+    # alpha = 0.001
 
     # start W_t at random value
     W_previous = np.full((X.shape[1], 1), random.uniform(0,1))
@@ -35,6 +37,7 @@ def logistic_regression(X, Y):
     W_current = W_previous + np.dot((alpha * X.T), (Y-S))
 
     # set diff and threshold
+    # original epsilon = 0.0001
     diff, epsilon = 1, 0.0001
 
     while abs(diff) > epsilon:
@@ -45,6 +48,7 @@ def logistic_regression(X, Y):
         S = sigmoid(np.dot(X, W_previous))
         W_current = W_previous + np.dot((alpha * X.T), (Y-S))
         diff = np.amin(W_current - W_previous)
+        # print diff
 
     return W_current
 
@@ -54,6 +58,6 @@ def predict_y(X, w):
     y = np.dot(w, (X.T))
     return y.T
 
-# puts results in [0,1] domain 
+# puts results in [0,1] domain
 def stabilize(p):
     return np.where(p > 0.5, 1, 0)
