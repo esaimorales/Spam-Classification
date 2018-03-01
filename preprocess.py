@@ -13,4 +13,13 @@ def transform(data):
 
 # binarize features using I(xij > 0)
 def binarize(data):
+    mu = data.mean(axis = 0)
+
+    for i in range(data.shape[0]):
+        for j in range(data.shape[1]):
+            if data[i, j] >= mu[j]:
+                data[i,j] = 1
+            else:
+                data[i,j] = 0
+
     return data

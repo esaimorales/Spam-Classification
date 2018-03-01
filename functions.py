@@ -16,8 +16,8 @@ def mean_error_rate(predicted, target):
 def get_error(predicted, target):
     a = predicted - target
     miss_count = np.count_nonzero(a)
-    print 'Miss:', miss_count
-    print 'Total:', target.shape[0]
+    # print 'Miss:', miss_count
+    # print 'Total:', target.shape[0]
     return float(miss_count/float(target.shape[0]))
 
 # defines logistic regression with gradient descent
@@ -54,5 +54,6 @@ def predict_y(X, w):
     y = np.dot(w, (X.T))
     return y.T
 
+# puts results in [0,1] domain 
 def stabilize(p):
     return np.where(p > 0.5, 1, 0)
